@@ -1,0 +1,3 @@
+service_id: srv-d5t226lactks73a7tut0
+
+api_token: rnd_MH111apNVH6J4ygrwho0ajz1EUQg
