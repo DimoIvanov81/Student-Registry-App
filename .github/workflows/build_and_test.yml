@@ -42,7 +42,7 @@ jobs:
       - name: Run security tests
         run: npm audit
   
-  deploy:
+  deploy_after_security_tests:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     needs: security_tests
@@ -52,4 +52,4 @@ jobs:
         with:
           service_id: ${{ secrets.MY_RENDER_SERVICE_ID }}
           api_key: ${{ secrets.MY_RENDER_API_KEY }}
-          wait_deploy: true
+          wait_deploy_after_security_tests: true
